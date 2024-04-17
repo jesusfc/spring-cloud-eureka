@@ -11,7 +11,7 @@
 
 	<artifactId>com-jesusfc-eureka-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spb-cloud-eureka-service</name>
+	<name>spring-cloud-eureka-server</name>
 	<description>Eureka Service</description>
 
 	<properties>
