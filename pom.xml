@@ -9,9 +9,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>com-jesusfc-eureka-service</artifactId>
+	<artifactId>spring-cloud-eureka-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-cloud-eureka-server</name>
+	<name>spring-cloud-eureka-service</name>
 	<description>Eureka Service</description>
 
 
