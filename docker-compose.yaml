@@ -1,13 +1,16 @@
 version: "3.9"
 services:
-  zipkin:
-    image: openzipkin/zipkin:latest
+  server:
+    build: .
+    restart: always
     ports:
       - "8761:8761"
-  config:
-    image: jfcaraballo/spring-cloud-eureka-service
-    ports:
-      - "8888:8888"
     environment:
       - SPRING_PROFILES_ACTIVE=development
       - SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS=classpath:/configurations
+    networks:
+      - my_spring-cloud-network
+
+networks:
+  my_network:
+    driver: bridge

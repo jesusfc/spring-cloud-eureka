@@ -1,5 +1,5 @@
 ##
-## Usar el plugin de Spotify (fabric8) para construir la imagen
+##
 ##
 FROM eclipse-temurin:17-jdk
 
@@ -11,7 +11,7 @@ EXPOSE 8761
 
 # Set the working directory
 WORKDIR /application
-COPY target/${project.build.finalName}.jar /application/${project.build.finalName}.jar
+COPY target/*.jar /application/spring-cloud-eureka.jar
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "${project.build.finalName}.jar"]
+ENTRYPOINT ["java", "-jar", "spring-cloud-eureka.jar"]
