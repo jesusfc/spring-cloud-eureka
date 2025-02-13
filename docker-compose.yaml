@@ -1,5 +1,9 @@
 version: "3.9"
 services:
+  zipkin:
+    image: openzipkin/zipkin:latest
+    ports:
+      - "9411:9411"
   server:
     build: .
     restart: always
@@ -7,10 +11,11 @@ services:
       - "8761:8761"
     environment:
       - SPRING_PROFILES_ACTIVE=development
-      - SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS=classpath:/configurations
     networks:
       - my_spring-cloud-network
 
 networks:
-  my_network:
+  my_spring-cloud-network:
     driver: bridge
+
+

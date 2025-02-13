@@ -1,5 +1,5 @@
 ##
-##
+## Usar el plugin de Spotify (fabric8) para construir la imagen
 ##
 FROM eclipse-temurin:17-jdk
 
